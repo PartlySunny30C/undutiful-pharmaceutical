@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>Undutiful Pharmaceutical</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,300;1,700&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <section class="header">
-        <h1>hi</h1>
+        <nav>
+            <a href="index.html"><img src="images/logo2.png"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times-circle-o" onclick="Hidemenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Q&A</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="Showmenu()"></i>
+        </nav>
+        <div class="textbox">
+            <h1>Welcome, valued customers!</h1>
+            <p>To commemorate the launch of our official website, we have a 50% off on all our products!</p>
+            <a href="">GO WILD!</a>
+        </div>
     </section>
+    <script>
+        var navlinks = document.getElementById("nav-links");
+        function Showmenu() {
+            navlinks.style.right = "0px";
+        }
+        function Hidemenu() {
+            navlinks.style.right = "-200px";
+        }
+    </script>
 </body>
+
 </html>
