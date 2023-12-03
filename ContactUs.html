@@ -4,14 +4,64 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>Undutiful Pharmaceutical</title>
+    <title>Contact Us - Undutiful Pharmaceutical</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,300;1,700&family=Roboto:wght@500&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,300;1,700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0; /* Remove default body margin */
+        }
+
+        .header {
+            height: 100vh;
+            overflow: hidden;
+            position: relative; /* Add relative positioning */
+        }
+
+        .textbox {
+            width: 90%;
+            position: absolute;
+            top: 30%; /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+        }
+
+        .contact-form {
+            position: absolute;
+            top: 70%; /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            max-width: 600px; /* Set a maximum width */
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .form-container {
+            /* Remove max-width and margin */
+        }
+
+        .form-container form {
+            display: grid;
+            grid-gap: 10px;
+        }
+
+        .form-container label,
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,18 +74,36 @@
                     <li><a href="AboutUs.html">About us</a></li>
                     <li><a href="product.html">Product</a></li>
                     <li><a href="Q&A.html">Q&A</a></li>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ContactUs.html">Contact us</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="Showmenu()"></i>
         </nav>
         <div class="textbox">
-            <h1>Contact inforamtion</h1>
-            <p>To commemorate the launch of our official website, we have a 50% off on all our products!</p>
-            <a href="product.html">GO WILD!</a>
+            <h1>Contact Us</h1>
+            <p>Have questions or feedback? Reach out to us using the form below.</p>
         </div>
     </section>
+
+    <section class="contact-form">
+        <div class="form-container">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
     <script>
+        // Your existing JavaScript code for menu toggle
         var navlinks = document.getElementById("nav-links");
         function Showmenu() {
             navlinks.style.right = "0px";

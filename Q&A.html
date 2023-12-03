@@ -4,14 +4,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>Undutiful Pharmaceutical</title>
+    <title>Q&A - Undutiful Pharmaceutical</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,300;1,700&family=Roboto:wght@500&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,300;1,700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -23,19 +21,155 @@
                 <ul>
                     <li><a href="AboutUs.html">About us</a></li>
                     <li><a href="product.html">Product</a></li>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Q&A.html">Q&A</a></li>
                     <li><a href="ContactUs.html">Contact us</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="Showmenu()"></i>
         </nav>
         <div class="textbox">
-            <h1>Welcome, valued customers!</h1>
-            <p>To commemorate the launch of our official website, we have a 50% off on all our products!</p>
-            <a href="product.html">GO WILD!</a>
+            <h1>Questions and Answers</h1>
+            <p>Find answers to commonly asked questions below.</p>
         </div>
     </section>
+
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="qa-item">
+                <h2>How do I place an order?</h2>
+                <p>To place an order, visit our <a href="product.html">Product</a> page and choose the items you want. Click on the "Add to Cart" button, and then proceed to checkout.</p>
+            </div>
+
+            <div class="qa-item">
+                <h2>What payment methods do you accept?</h2>
+                <p>We accept various payment methods, including credit cards and online payment services. You can view the available options during the checkout process.</p>
+            </div>
+
+            <div class="qa-item">
+                <h2>How can I track my order?</h2>
+                <p>Once your order is shipped, you will receive a confirmation email with a tracking number. You can use this tracking number to monitor the status of your delivery.</p>
+            </div>
+        </div>
+    </section>
+
     <script>
+        // Your existing JavaScript code for menu toggle
+        var navlinks = document.getElementById("nav-links");
+        function Showmenu() {
+            navlinks.style.right = "0px";
+        }
+        function Hidemenu() {
+            navlinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Q&A - Undutiful Pharmaceutical</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,300;1,700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0; /* Remove default body margin */
+        }
+
+        .header {
+            height: 100vh;
+            overflow: hidden;
+            position: relative; /* Add relative positioning */
+        }
+
+        .textbox {
+            width: 90%;
+            color: white;
+            position: absolute;
+            top: 30%; /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+        }
+
+        .qa-section {
+            position: absolute;
+            top: 70%; /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            max-width: 800px; /* Set a maximum width */
+            padding: 20px;
+            z-index: 2;
+        }
+
+        .qa-container {
+            
+        }
+
+        .qa-item {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .qa-item h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo2.png"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times-circle-o" onclick="Hidemenu()"></i>
+                <ul>
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="Q&A.html">Q&A</a></li>
+                    <li><a href="ContactUs.html">Contact us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="Showmenu()"></i>
+        </nav>
+        <div class="textbox">
+            <h1>Questions and Answers</h1>
+            <p>Find answers to commonly asked questions below.</p>
+        </div>
+    </section>
+
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="qa-item">
+                <h2>How do I place an order?</h2>
+                <p>To place an order, visit our <a href="product.html">Product</a> page and choose the items you want. Click on the "Add to Cart" button, and then proceed to checkout.</p>
+            </div>
+
+            <div class="qa-item">
+                <h2>What payment methods do you accept?</h2>
+                <p>We accept various payment methods, including credit cards and online payment services. You can view the available options during the checkout process.</p>
+            </div>
+
+            <div class="qa-item">
+                <h2>How can I track my order?</h2>
+                <p>Once your order is shipped, you will receive a confirmation email with a tracking number. You can use this tracking number to monitor the status of your delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Your existing JavaScript code for menu toggle
         var navlinks = document.getElementById("nav-links");
         function Showmenu() {
             navlinks.style.right = "0px";

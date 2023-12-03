@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
-    <title>Products - Undutiful Pharmaceutical</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Undutiful Pharmaceutical</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,49 +13,49 @@
     <style>
         body {
             overflow: hidden;
-            margin: 0; /* Remove default body margin */
+            margin: 0;
         }
 
         .header {
             height: 100vh;
             overflow: hidden;
-            position: relative; /* Add relative positioning */
+            position: relative;
         }
 
         .textbox {
             width: 90%;
             color: white;
             position: absolute;
-            top: 30%; /* Adjusted position */
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
             z-index: 1;
         }
 
-        .product-section {
+        .checkout-section {
             position: absolute;
-            top: 70%; /* Adjusted position */
+            top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
             width: 90%;
-            max-width: 800px; /* Set a maximum width */
-            
+            max-width: 800px;
+            background-color: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 2;
         }
 
-        .product-container {
-            /* Remove max-width and margin */
+        .checkout-container {
             display: flex;
             justify-content: space-around;
             align-items: stretch;
         }
 
-        .product-item {
-            flex: 0 0 45%; /* Adjusted width */
+        .order-summary,
+        .checkout-form {
+            flex: 0 0 45%;
             margin: 10px;
             padding: 20px;
             background-color: #f9f9f9;
@@ -64,23 +64,26 @@
             text-align: left;
         }
 
-        .product-item img {
-            width: 100%;
-            border-radius: 8px;
+        .total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .checkout-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkout-form label,
+        .checkout-form input,
+        .checkout-form textarea,
+        .checkout-form select,
+        .checkout-form button {
             margin-bottom: 10px;
         }
 
-        .product-item h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .product-item p {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .product-item button {
+        .checkout-form button {
             background-color: #3498db;
             color: white;
             padding: 10px 15px;
@@ -108,30 +111,54 @@
             <i class="fa fa-bars" onclick="Showmenu()"></i>
         </nav>
         <div class="textbox">
-            <h1>Our Products</h1>
-            <p>Explore our range of high-quality pharmaceutical products designed to meet your health needs.</p>
+            <h1>Checkout</h1>
+            <p>Review your order and complete the checkout process.</p>
         </div>
     </section>
 
-    <section class="product-section">
-        <div class="product-container">
-            <div class="product-item">
-                <img src="images/product.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Price: $XX.XX</p>
-                <button href = "checkout.html">Add to Cart</button>
+    <section class="checkout-section">
+        <div class="checkout-container">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <!-- Display ordered items and total price -->
+                <div class="ordered-item">
+                    <span>Product 1</span>
+                    <span>$XX.XX</span>
+                </div>
+                <div class="ordered-item">
+                    <span>Product 2</span>
+                    <span>$XX.XX</span>
+                </div>
+                <!-- Add more items as needed -->
+
+                <div class="total">
+                    <span>Total:</span>
+                    <span>$XXX.XX</span>
+                </div>
             </div>
 
-            <div class="product-item">
-                <img src="images/product2.jpg" alt="Product 2">
-                <h2>Product 2</h2>
-                <p>Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Price: $XX.XX</p>
-                <button href = "checkout.html">Add to Cart</button>
-            </div>
+            <div class="checkout-form">
+                <h2>Shipping Information</h2>
+                <form action="submit_order.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-            <!-- Add more product items as needed -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <!-- Add more payment options as needed -->
+                    </select>
+
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -148,3 +175,4 @@
 </body>
 
 </html>
+5

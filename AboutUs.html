@@ -4,15 +4,65 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>Undutiful Pharmaceutical</title>
+    <title>About Us - Undutiful Pharmaceutical</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,300;1,700&family=Roboto:wght@500&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,300;1,700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0; /* Remove default body margin */
+        }
+
+        .header {
+            height: 100vh;
+            overflow: hidden;
+            position: relative; /* Add relative positioning */
+        }
+
+        .textbox {
+            width: 90%;
+            color: white;
+            position: absolute;
+            top: 30%; /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+        }
+
+        .about-section {
+            position: absolute;
+            top: 70%; /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            max-width: 800px; /* Set a maximum width */
+            
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .about-container {
+            /* Remove max-width and margin */
+        }
+
+        .about-content {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .about-content h2 {
+            margin-bottom: 10px;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
     <section class="header">
         <nav>
@@ -20,7 +70,7 @@
             <div class="nav-links" id="nav-links">
                 <i class="fa fa-times-circle-o" onclick="Hidemenu()"></i>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About us</a></li>
                     <li><a href="product.html">Product</a></li>
                     <li><a href="Q&A.html">Q&A</a></li>
                     <li><a href="ContactUs.html">Contact us</a></li>
@@ -29,12 +79,32 @@
             <i class="fa fa-bars" onclick="Showmenu()"></i>
         </nav>
         <div class="textbox">
-            <h1>Welcome, valued customers!</h1>
-            <p>To commemorate the launch of our official website, we have a 50% off on all our products!</p>
-            <a href="product.html">GO WILD!</a>
+            <h1>About Us</h1>
+            <p>Welcome to Undutiful Pharmaceutical, where health meets innovation. Learn more about our mission and values below.</p>
         </div>
     </section>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Our Mission</h2>
+                <p>At Undutiful Pharmaceutical, our mission is to provide high-quality and innovative healthcare solutions to improve the well-being of our customers. We are committed to excellence, integrity, and customer satisfaction.</p>
+            </div>
+
+            <div class="about-content">
+                <h2>Our Values</h2>
+                <p>We prioritize the health and happiness of our customers. Our values include transparency, continuous improvement, and a dedication to creating products that positively impact lives. We strive for excellence in everything we do.</p>
+            </div>
+
+            <div class="about-content">
+                <h2>Our Team</h2>
+                <p>Our team consists of passionate professionals in the fields of medicine, research, and technology. Together, we work tirelessly to develop cutting-edge pharmaceutical solutions that address the evolving needs of our community.</p>
+            </div>
+        </div>
+    </section>
+
     <script>
+        // Your existing JavaScript code for menu toggle
         var navlinks = document.getElementById("nav-links");
         function Showmenu() {
             navlinks.style.right = "0px";
@@ -44,3 +114,5 @@
         }
     </script>
 </body>
+
+</html>
